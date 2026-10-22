@@ -1,0 +1,14 @@
+C:\Users\Пользователь\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\bin\Debug\GladiatorBattles.exe.config
+C:\Users\Пользователь\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\bin\Debug\GladiatorBattles.exe
+C:\Users\Пользователь\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\bin\Debug\GladiatorBattles.pdb
+C:\Users\Пользователь\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\obj\Debug\GladiatorBattles.csproj.AssemblyReference.cache
+C:\Users\Пользователь\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\obj\Debug\GladiatorBattles.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\obj\Debug\GladiatorBattles.exe
+C:\Users\Пользователь\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\obj\Debug\GladiatorBattles.pdb
+C:\Users\Adminsha\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\obj\Debug\GladiatorBattles.csproj.AssemblyReference.cache
+C:\Users\Adminsha\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\obj\Debug\GladiatorBattles.csproj.CoreCompileInputs.cache
+C:\Users\Adminsha\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\obj\Debug\GladiatorBattles.exe
+C:\Users\Adminsha\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\obj\Debug\GladiatorBattles.pdb
+C:\Users\Adminsha\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\bin\Debug\GladiatorBattles.exe.config
+C:\Users\Adminsha\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\bin\Debug\GladiatorBattles.exe
+C:\Users\Adminsha\Desktop\МДК 02.01 Программисты 1 курс\Разработки\№2 Консольное приложение ''GladiatorBattle''\GladiatorBattles\bin\Debug\GladiatorBattles.pdb

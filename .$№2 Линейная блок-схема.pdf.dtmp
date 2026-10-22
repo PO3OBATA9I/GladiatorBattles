@@ -1,0 +1,67 @@
+<mxfile host="Electron">
+  <diagram name="Страница-1" id="tcYROHhcb-ZQjPoSx5XK">
+    <mxGraphModel dx="442" dy="299" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-5" edge="1" parent="1" source="NH_pUBZ-XLDh8CpPwyCB-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0.133;entryDx=0;entryDy=0;entryPerimeter=0;" target="NH_pUBZ-XLDh8CpPwyCB-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-1" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="НАЧАЛО" vertex="1">
+          <mxGeometry height="60" width="100" x="270" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-12" edge="1" parent="1" source="NH_pUBZ-XLDh8CpPwyCB-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NH_pUBZ-XLDh8CpPwyCB-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-6" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Получить случайный удар" vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-13" edge="1" parent="1" source="NH_pUBZ-XLDh8CpPwyCB-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NH_pUBZ-XLDh8CpPwyCB-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Рассчитать нанесённый урон с учётом брони" vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-16" edge="1" parent="1" source="NH_pUBZ-XLDh8CpPwyCB-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Итоговый урон = Входящий урон * (1 - (Броня / 100))" vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-15" edge="1" parent="1" source="NH_pUBZ-XLDh8CpPwyCB-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="NH_pUBZ-XLDh8CpPwyCB-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-14" parent="1" style="html=1;strokeWidth=2;shape=manualInput;boundedLbl=1;whiteSpace=wrap;rounded=1;size=26;arcSize=11;" value="Нач. ур. здоровья,&lt;div&gt;крепость брони&lt;br&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="100" x="270" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-19" edge="1" parent="1" source="NH_pUBZ-XLDh8CpPwyCB-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=53.75;exitDy=60;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="NH_pUBZ-XLDh8CpPwyCB-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="319" y="715" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-17" parent="1" style="shape=display;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Итоговый урон,&amp;nbsp; &amp;nbsp;оставшееся&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;здоровье&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="110" x="265" y="633" as="geometry" />
+        </mxCell>
+        <mxCell id="NH_pUBZ-XLDh8CpPwyCB-20" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" value="КОНЕЦ" vertex="1">
+          <mxGeometry height="60" width="100" x="270" y="725" as="geometry" />
+        </mxCell>
+        <mxCell id="0JCorM_YwyThurHmRmth-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Оставшееся здоровье = нач. здоровье - итоговый урон" vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="0JCorM_YwyThurHmRmth-2" edge="1" parent="1" source="0JCorM_YwyThurHmRmth-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=53.75;entryDy=0;entryPerimeter=0;" target="NH_pUBZ-XLDh8CpPwyCB-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
