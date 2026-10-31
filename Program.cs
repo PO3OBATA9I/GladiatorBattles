@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace GladiatorBattles
             double StartHealth1, Armor1, RandomDamage1, Damage1, EndHealth1;
             double StartHealth2, Armor2, Damage2, RandomDamage2, EndHealth2;
             double minDamage1 = 0, minDamage2 = 0, maxDamage1 = 0, maxDamage2 = 0;
-            int weaponChoice1, weaponChoice2;
+            int weaponChoice1 = 0, weaponChoice2 = 0;
             string Text;
 
             //Цвет заднего фона и текста + заголовок
@@ -50,18 +51,33 @@ namespace GladiatorBattles
             Console.WriteLine("                                      2 - Топор");
             Console.WriteLine("                                      3 - Копьё");
 
-            weaponChoice1 = Convert.ToInt32(Console.ReadLine()); //Пользователь вводит номер оружия
-
-            //Проверка ввода оружия
-            while (weaponChoice1 < 1 || weaponChoice1 > 3)
+            while (weaponChoice1 == 0)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Ошибка! Введите 1, 2 или 3.");
-                Console.ForegroundColor = ConsoleColor.Green;
-                weaponChoice1 = Convert.ToInt32(Console.ReadLine()); //Опять вводит номер
+                Console.WriteLine("Введите номер или название оружия: ");
+                Text = Console.ReadLine();
+
+                Text = Text.ToLower(); //Чтобы (например) Топор, топор и ТОПОР считались одинак.
+
+                if (Text == "1" || Text == "меч")
+                {
+                    weaponChoice1 = 1;
+                }
+                else if (Text == "2" || Text == "топор")
+                {
+                    weaponChoice1 = 2;
+                }
+                else if (Text == "3" || Text == "копьё" || Text == "копье")
+                {
+                    weaponChoice1 = 3;
+                }
+                else
+                //проверка ввода оружия               
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Ошибка! Введите 1, 2, 3 или название оружия (Меч, Топор, Копьё).");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                }
             }
-
-
             //выбираем диапазон урона для кажд. оружия ПЕРВОГО бойца
             switch (weaponChoice1)
             {
@@ -115,19 +131,35 @@ namespace GladiatorBattles
             Console.WriteLine("                                      2 - Топор");
             Console.WriteLine("                                      3 - Копьё");
 
-            weaponChoice2 = Convert.ToInt32(Console.ReadLine()); //Пользователь вводит номер оружия
+                while (weaponChoice2 == 0)
+                {
+                    Console.WriteLine("Введите номер или название оружия: ");
+                    Text = Console.ReadLine();
 
-            //Проверка ввода оружия
-            while (weaponChoice2 < 1 || weaponChoice2 > 3)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Ошибка! Введите 1, 2 или 3.");
-                Console.ForegroundColor = ConsoleColor.Green;
-                weaponChoice2 = Convert.ToInt32(Console.ReadLine()); //Опять вводит номер
-            }
+                    Text = Text.ToLower(); //Чтобы (например) Топор, топор и ТОПОР считались одинак.
 
-            //выбираем диапазон урона для кажд. оружия ВТОРОГО бойца
-            switch (weaponChoice2)
+                    if (Text == "1" || Text == "меч")
+                    {
+                        weaponChoice2 = 1;
+                    }
+                    else if (Text == "2" || Text == "топор")
+                    {
+                        weaponChoice2 = 2;
+                    }
+                    else if (Text == "3" || Text == "копьё" || Text == "копье")
+                    {
+                        weaponChoice2 = 3;
+                    }
+                    else
+                    //проверка ввода оружия               
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Ошибка! Введите 1, 2, 3 или название оружия (Меч, Топор, Копьё).");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                }
+                    //выбираем диапазон урона для кажд. оружия ВТОРОГО бойца
+                    switch (weaponChoice2)
             {
                 case 1:
                     minDamage2 = 50.0;
