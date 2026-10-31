@@ -14,6 +14,8 @@ namespace GladiatorBattles
         {
             double StartHealth1, Armor1, RandomDamage1, Damage1, EndHealth1;
             double StartHealth2, Armor2, Damage2, RandomDamage2, EndHealth2;
+            double minDamage1 = 0, minDamage2 = 0, maxDamage1 = 0, maxDamage2 = 0;
+            int weaponChoice1, weaponChoice2;
             string Text;
 
             //Цвет заднего фона и текста + заголовок
@@ -22,23 +24,72 @@ namespace GladiatorBattles
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Clear();
 
-            //Ввод здоровья и % брони для ПЕРВОГО бойца
+            Console.WriteLine("=============== ПЕРВЫЙ БОЕЦ ===============");
+            //Ввод начального уровня здоровья для ПЕРВОГО бойца
             Console.WriteLine("Введите начальный уровень здоровья у первого бойца: ");
             Text = Console.ReadLine();
             StartHealth1 = Convert.ToDouble(Text);
 
+            //Ввод крепости брони в % для ПЕРВОГО бойца
             rep: Console.WriteLine("Введите крепость брони у первого бойца (в %): ");
             Text = Console.ReadLine();
             Armor1 = Convert.ToDouble(Text);
 
-            
             //Проверка крепости брони 1
             if (Armor1 < 0 || Armor1 > 100)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Ошибка! Крепость брони должна быть от 0 до 100 %");
+                Console.ForegroundColor = ConsoleColor.Green;
                 goto rep;
             }
 
+            //Выбор оружия
+            Console.WriteLine("==================== Выберите оружие для первого гладиатора ====================");
+            Console.WriteLine("                                      1 - Меч");
+            Console.WriteLine("                                      2 - Топор");
+            Console.WriteLine("                                      3 - Копьё");
+
+            weaponChoice1 = Convert.ToInt32(Console.ReadLine()); //Пользователь вводит номер оружия
+
+            //Проверка ввода оружия
+            while (weaponChoice1 < 1 || weaponChoice1 > 3)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Ошибка! Введите 1, 2 или 3.");
+                Console.ForegroundColor = ConsoleColor.Green;
+                weaponChoice1 = Convert.ToInt32(Console.ReadLine()); //Опять вводит номер
+            }
+
+
+            //выбираем диапазон урона для кажд. оружия ПЕРВОГО бойца
+            switch (weaponChoice1)
+            {
+                case 1:
+                    minDamage1 = 50.0;
+                    maxDamage1 = 75.0;
+                    Console.WriteLine("Выбран Меч.");
+                    break;
+
+                case 2:
+                    minDamage1 = 40.0;
+                    maxDamage1 = 65.0;
+                    Console.WriteLine("Выбран Топор.");
+                    break;
+
+                case 3:
+                    minDamage1 = 30.0;
+                    maxDamage1 = 55.0;
+                    Console.WriteLine("Выбрано Копьё.");
+                    break;
+            }
+
+
+
+
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("=============== ВТОРОЙ БОЕЦ ===============");
 
             //Ввод здоровья и % брони для ВТОРОГО бойца
             Console.WriteLine("Введите начальный уровень здоровья у второго бойца: ");
@@ -53,10 +104,56 @@ namespace GladiatorBattles
             //Проверка крепости брони 2
             if (Armor2 < 0 || Armor2 > 100)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Ошибка! Крепость брони должна быть от 0 до 100 %");
+                Console.ForegroundColor = ConsoleColor.Green;
                 goto rep1;
             }
 
+            Console.WriteLine("==================== Выберите оружие для второго гладиатора ====================");
+            Console.WriteLine("                                      1 - Меч");
+            Console.WriteLine("                                      2 - Топор");
+            Console.WriteLine("                                      3 - Копьё");
+
+            weaponChoice2 = Convert.ToInt32(Console.ReadLine()); //Пользователь вводит номер оружия
+
+            //Проверка ввода оружия
+            while (weaponChoice2 < 1 || weaponChoice2 > 3)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Ошибка! Введите 1, 2 или 3.");
+                Console.ForegroundColor = ConsoleColor.Green;
+                weaponChoice2 = Convert.ToInt32(Console.ReadLine()); //Опять вводит номер
+            }
+
+            //выбираем диапазон урона для кажд. оружия ВТОРОГО бойца
+            switch (weaponChoice2)
+            {
+                case 1:
+                    minDamage2 = 50.0;
+                    maxDamage2 = 75.0;
+                    Console.WriteLine("Выбран Меч.");
+                    break;
+
+                case 2:
+                    minDamage2 = 40.0;
+                    maxDamage2 = 65.0;
+                    Console.WriteLine("Выбран Топор.");
+                    break;
+
+                case 3:
+                    minDamage2 = 30.5;
+                    maxDamage2 = 55.0;
+                    Console.WriteLine("Выбрано Копьё.");
+                    break;
+            }
+
+
+
+
+
+
+            Console.ForegroundColor = ConsoleColor.Black;
             EndHealth1 = StartHealth1;
             EndHealth2 = StartHealth2;
             int CountHit = 0;
@@ -64,7 +161,11 @@ namespace GladiatorBattles
             for (; EndHealth1 > 0 && EndHealth2 > 0; ) 
             {
                 //Удар ПЕРВОГО бойца по ВТОРОМУ
-                RandomDamage1 = rand.NextDouble() * 100; //Генерация случайного урона у ПЕРВОГО бойца(адекватное число)
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine($"Удар номер {CountHit+1}"); //Пишет номер удара
+
+                Console.ForegroundColor = ConsoleColor.Black;
+                RandomDamage1 = minDamage1 + rand.NextDouble() * (maxDamage1 - minDamage1);
                 Console.WriteLine("===============================================");
                 Console.WriteLine($"Первый боец наносит удар силой: {RandomDamage1:F1}");
 
@@ -77,11 +178,16 @@ namespace GladiatorBattles
                 Console.WriteLine($"Здоровье второго бойца: {EndHealth2:F1}");
 
                 CountHit++; //увеличивает счётчик после 1-ого удара
+
                 if (EndHealth2 <= 0) break; //елси 2-ой боец умер, он не должен
                                             //бить в ответ
 
                 //Удар ВТОРОГО бойца по ПЕРВОМУ
-                RandomDamage2 = rand.NextDouble() * 100; //Генерация случайного урона у ВТОРОГО бойца (адекватное число)
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine($"Удар номер {CountHit + 1}"); //Пишет номер удара
+
+                Console.ForegroundColor = ConsoleColor.Black;
+                RandomDamage2 = minDamage2 + rand.NextDouble() * (maxDamage2 - minDamage2);
                 Console.WriteLine("===============================================");
                 Console.WriteLine($"Второй боец наносит удар силой: {RandomDamage2:F1}");
 
@@ -93,22 +199,29 @@ namespace GladiatorBattles
                 Console.WriteLine($"Здоровье первого бойца: {EndHealth1:F1}");
 
                 CountHit++; //увеличивает счётчик после 2-ого удара
+
+                Console.ForegroundColor = ConsoleColor.Black;
+
             }
 
 
+
+
+
             //Проверка здоровья для вывода сообщения
+            Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("===============================================");
-            if (EndHealth2 <= 0)
+            if (EndHealth1 <= 0 && EndHealth2 <= 0)
+            {
+                Console.WriteLine($"Ничья. Оба погибли. Всего ударов: {CountHit}");
+            }
+            else if (EndHealth2 <= 0)
             {
                 Console.WriteLine($"Победил первый гладиатор. Всего ударов: {CountHit}");
             }
             else if (EndHealth1 <= 0)
             {
                 Console.WriteLine($"Победил второй гладиатор. Всего ударов: {CountHit}");
-            }
-            else if (EndHealth1 <= 0 && EndHealth2 <= 0)
-            {
-                Console.WriteLine($"Ничья. Никто не одержал победу. Всего ударов: {CountHit}");
             }
 
             Console.ReadKey();
